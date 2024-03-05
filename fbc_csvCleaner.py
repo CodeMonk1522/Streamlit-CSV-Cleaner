@@ -4,7 +4,7 @@ import pandas as pd
 
 def filter_columns(df):
     # Select only the specified columns
-    columns_to_keep = ['Stock Number', 'Product Name', 'Email Address']
+    columns_to_keep = ["Participants Name (Last  First)", 'Title/Position', 'Email Address', 'Phone Number']
     filtered_df = df[columns_to_keep]
     return filtered_df
 
