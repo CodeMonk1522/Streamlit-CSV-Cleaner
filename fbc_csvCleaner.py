@@ -4,7 +4,7 @@ import pandas as pd
 
 def filter_columns(df):
     # Select only the specified columns
-    columns_to_keep = ["Participants Name (Last  First)", 'Title/Position', 'Email Address', 'Phone Number']
+    columns_to_keep = ["First Name", 'Last Name', 'Email', 'Phone Number', 'Company/School', 'Title/Position/Role']
     filtered_df = df[columns_to_keep]
     return filtered_df
 
@@ -18,17 +18,17 @@ def main():
         # Read CSV file
         df = pd.read_csv(uploaded_file, skiprows=1)  # skip the first row
         
-        # Print columns
+        # # Print columns
         # st.write("Columns of the uploaded CSV:")
         # st.write(df.columns.tolist())
         
-        st.write("Original DataFrame:")
+        st.write("Original Sheet:")
         st.write(df)
         
         # Filter columns
         filtered_df = filter_columns(df)
         
-        st.write("Filtered DataFrame:")
+        st.write("Filtered Sheet:")
         st.write(filtered_df)
         
         # Download link
