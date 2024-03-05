@@ -9,7 +9,7 @@ def filter_columns(df):
     return filtered_df
 
 def main():
-    st.title("CSV Column Filter")
+    st.title("CSV Cleaner")
     
     # File uploader
     uploaded_file = st.file_uploader("Upload CSV", type=["csv"])
