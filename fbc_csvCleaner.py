@@ -32,7 +32,8 @@ def main():
         st.write(filtered_df)
         
         # Download link
-        st.markdown(get_download_link(filtered_df), unsafe_allow_html=True)
+        # st.markdown(get_download_link(filtered_df), unsafe_allow_html=True)
+        st.button("Download Filtered Sheet", get_download_link(filtered_df))
 
 def get_download_link(df):
     csv = df.to_csv(index=False)
