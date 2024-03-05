@@ -34,7 +34,7 @@ def main():
         
         # Download link
         # st.markdown(get_download_link(filtered_df), unsafe_allow_html=True)
-        st.download_button(label="Download Filtered Sheet", data=get_download_link(filtered_df), file_name='data.csv', mime='text/csv')
+        st.download_button(label="Download Filtered Sheet", data=get_download_link(filtered_df), file_name='filtered_data.csv', mime='text/csv')
 
 def get_download_link(df):
     csv = df.to_csv(index=False)
